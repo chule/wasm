@@ -3,7 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <title>Hello World - Rust</title>
-    <script type="module" src="./index.js"></script>
   </head>
-  <body></body>
+  <body>
+    <form>
+      <label for="num1">Number 1:</label><br />
+      <input type="number" id="num1" name="num1" /><br />
+      <label for="num2">Number 2:</label><br />
+      <input type="number" id="num2" name="num2" /><br /><br />
+      <button type="button" id="mybutton">Add</button>
+    </form>
+
+    <p>Result: <span id="result"></span></p>
+    <script type="module" src="./index.js"></script>
+  </body>
 </html>

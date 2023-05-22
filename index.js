@@ -7,9 +7,15 @@ const runWasm = async () => {
   const helloWorld = await init("./pkg/wasm_bg.wasm");
 
   // Call the Add function export from wasm, save the result
-  const addResult = helloWorld.add(14, 3);
+  //   const addResult = helloWorld.add(24, 24);
 
-  // Set the result onto the body
-  document.body.textContent = `Hello World! addResult: ${addResult}`;
+  //   // Set the result onto the body
+  //   document.body.textContent = `Hello World! addResult: ${addResult}`;
+
+  document.getElementById("mybutton").addEventListener("click", () => {
+    var num1 = parseInt(document.getElementById("num1").value);
+    var num2 = parseInt(document.getElementById("num2").value);
+    document.getElementById("result").innerHTML = helloWorld.add(num1, num2);
+  });
 };
 runWasm();
